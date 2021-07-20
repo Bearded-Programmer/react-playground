@@ -13,6 +13,7 @@ export default class Index extends Component {
       .get("https://reqres.in/api/users?page=2")
       .then((response) => {
         this.setState({ business: response.data.data });
+        console.log('response.data.data',response.data.data);
       })
       .catch(function (error) {
         console.log(error);
