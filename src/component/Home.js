@@ -7,6 +7,12 @@ import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import { Loading } from "./Loading";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 export default class Home extends Component {
   constructor(props) {

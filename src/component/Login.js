@@ -5,26 +5,40 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.css";
 
-var user = {
-  email: "react",
-  password: "password",
-  name: "React Learner",
-};
-var isAuthenticated = false;
-
 export default class Login extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {},
+      isAuthenticated: false,
+    };
+  }
+
+  setUser() {
+    this.setState({
+      user: {
+        email: "react",
+        password: "password",
+        name: "React Learner",
+      },
+    });
+  }
+
+  componentDidMount() {
+    this.setUser();
+  }
+
   authenticate(e) {
     e.preventDefault();
     if (
-      user.email === e.target.formBasicUsername.value &&
-      user.password === e.target.formBasicPassword.value
+      "react" === e.target.formBasicUsername.value &&
+      "password" === e.target.formBasicPassword.value
     ) {
-      isAuthenticated = true;
-    } else {
-      isAuthenticated = false;
+      this.setState({
+        isAuthenticated: true,
+      });
     }
-    console.log("isAuthenticated : ", isAuthenticated);
+    console.log("isAuthenticated : ", this.state.isAuthenticated);
   }
 
   render() {
