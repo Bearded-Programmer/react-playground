@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TableRow from "./TableRow";
+import Table from 'react-bootstrap/Table';
 
 export default class Index extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class Index extends Component {
     return (
       <div>
         <h3 align="center">Business List</h3>
-        <table className="table table-striped" style={{ marginTop: 20 }}>
+        <Table responsive variant="dark" className="table table-striped" style={{ marginTop: 20 }}>
           <thead>
             <tr>
               <th>First Name</th>
@@ -39,7 +40,7 @@ export default class Index extends Component {
             </tr>
           </thead>
           <tbody>{this.tabRow()}</tbody>
-        </table>
+        </Table>
       </div>
     );
   }

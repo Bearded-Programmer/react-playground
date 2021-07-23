@@ -23,12 +23,12 @@ class TableRow extends Component {
         <td>{this.props.obj.email}</td>
         <td>
           <Link to={"/edit/" + this.props.obj.id} className="btn btn-primary">
-            Edit
+            <i class="bi bi-pencil"></i> Edit
           </Link>
         </td>
         <td>
           <button onClick={this.delete} className="btn btn-danger">
-            Delete
+            <i class="bi bi-archive"></i> Delete
           </button>
         </td>
       </tr>

@@ -4,6 +4,7 @@ import Create from './demoComponent/Create';
 import Edit from './demoComponent/Edit';
 import Index from './demoComponent/Index';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar'
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -12,7 +13,8 @@ export default class App extends Component {
     return (
       <Router>
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Navbar bg="dark" variant="dark">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link to={"/"} className="navbar-brand">
               React CRUD Example
             </Link>
@@ -39,6 +41,8 @@ export default class App extends Component {
               </ul>
             </div>
           </nav>{" "}
+         
+          </Navbar>
           <br />
           <h2>Welcome to React CRUD Tutorial</h2> <br />
           <Switch>
